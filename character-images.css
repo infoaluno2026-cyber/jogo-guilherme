@@ -1,0 +1,39 @@
+.hero-silhouette {
+  width: 270px;
+  height: 330px;
+  left: 31%;
+  top: 18%;
+  background: url('assets/heroi.jpg') center / contain no-repeat;
+  clip-path: none;
+  filter: drop-shadow(12px 11px 0 rgba(240, 90, 50, .7));
+}
+
+.player {
+  width: 92px;
+  height: 120px;
+  background: url('assets/heroi.jpg') center / contain no-repeat;
+  clip-path: none;
+  filter: drop-shadow(7px 8px 0 #182b3d);
+}
+
+.player::after,
+.enemy::after {
+  content: none;
+}
+
+.enemy {
+  width: 92px;
+  height: 120px;
+  background: url('assets/vilao-gelo.jpg') center / contain no-repeat;
+  clip-path: none;
+  filter: drop-shadow(-7px 8px 0 #235575);
+}
+
+@media (max-width: 750px) {
+  .hero-silhouette {
+    width: 230px;
+    height: 290px;
+    left: 27%;
+    top: 12%;
+  }
+}

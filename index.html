@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fire Ice: a aventura de Lonpi contra Winter.">
+  <title>Fire Ice | A lenda de Lonpi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="character-images.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="title-bar">
+      <div class="brand"><span class="brand-mark">F<span>✦</span>I</span><div><p class="eyebrow">Uma aventura de</p><h1>Fire Ice</h1></div></div>
+      <div class="chapter"><span id="chapterLabel">CAPÍTULO 01</span><strong id="chapterTitle">O chamado</strong></div>
+    </section>
+
+    <section id="introScreen" class="intro-screen screen-visible">
+      <div class="intro-copy">
+        <p class="eyebrow warm">Reino de Fogo // 20 anos</p>
+        <h2>Nem mesmo a<br><em>água</em> pode me parar.</h2>
+        <p class="lead">Lonpi era apenas um carteiro até que seu irmão, Winter, transformou uma cidade inteira em gelo. Agora, o herói precisa atravessar o universo para salvar sua família e a humanidade.</p>
+        <button id="startButton" class="primary-button">Começar aventura <span>→</span></button>
+        <p class="hint">Setas ou WASD para mover · Espaço para lançar fogo</p>
+      </div>
+      <div class="intro-art" aria-hidden="true"><div class="sun-core"></div><div class="hero-silhouette"></div><div class="ice-ring"></div><div class="art-label">LONPI<br><small>O carteiro de Fire Ice</small></div></div>
+    </section>
+
+    <section id="gameScreen" class="game-screen" aria-label="Jogo Fire Ice">
+      <div class="hud">
+        <div class="hud-block"><span class="hud-label">LONPI <small>HERÓI</small></span><div class="meter"><i id="heroHealth" style="width:100%"></i></div><strong id="heroHealthText">100</strong></div>
+        <div class="mission"><span class="eyebrow">MISSÃO ATUAL</span><strong id="missionText">Alcance Winter no Reino do Gelo</strong></div>
+        <div class="hud-block enemy-hud"><span class="hud-label">WINTER <small>VILÃO</small></span><div class="meter ice-meter"><i id="enemyHealth" style="width:100%"></i></div><strong id="enemyHealthText">100</strong></div>
+      </div>
+      <div class="arena-wrap"><div id="arena" class="arena"><div class="arena-sign">REINO DO GELO <span>•</span> FASE 01</div><div id="player" class="player" role="img" aria-label="Lonpi"></div><div id="enemy" class="enemy" role="img" aria-label="Winter"></div><div id="projectiles"></div><div id="arenaMessage" class="arena-message">Winter está esperando...</div></div></div>
+      <div class="game-controls"><div><span class="control-key">WASD</span> mover <span class="control-key">ESPAÇO</span> fogo</div><div id="powerStatus" class="power-status">Poder de fogo pronto</div><button id="restartButton" class="ghost-button">Recomeçar</button></div>
+    </section>
+
+    <section id="endingScreen" class="ending-screen">
+      <div class="ending-card"><p class="eyebrow warm">O reino respira novamente</p><h2>Fire Ice<br><em>renasce.</em></h2><p id="endingText">Lonpi venceu Winter e libertou as pessoas congeladas. Sua coragem devolveu a alegria ao mundo.</p><div class="ending-actions"><button id="extraButton" class="primary-button">Desbloquear missão extra <span>✦</span></button><button id="playAgainButton" class="ghost-button">Jogar novamente</button></div><div id="extraMission" class="extra-mission"><span class="item-icon">✦</span><div><p class="eyebrow">MISSÃO SECRETA DESBLOQUEADA</p><strong>O Coração de Fire Ice</strong><p>Encontre o item misterioso no antigo castelo de Winter e combine fogo e gelo em um novo ataque.</p></div></div></div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
